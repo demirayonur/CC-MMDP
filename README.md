@@ -48,6 +48,8 @@ problem.read();
 ```
 **Caveat:** In order to read and construct the MDPs, thus scenarios, you should employ `read()` method as in the above example.
 
+**Caveat:** The data will become open to access after the paper is officially published in the journal to which it was submitted. 
+
 ## 2. Run MIP-MMDP with CPLEX
 
 You should introduce the `Problem` object to the constructor method in `MIP.java` as follows in order to solve the MIP model developed for the problem instance.

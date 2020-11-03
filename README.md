@@ -48,7 +48,7 @@ problem.read();
 ```
 **Caveat:** In order to read and construct the MDPs, thus scenarios, you should employ `read()` method as in the above example.
 
-## 2. Run MIP
+## 2. Run MIP-MMDP with CPLEX
 
 You should introduce the `Problem` object to the constructor method in `MIP.java` as follows in order to solve the MIP model developed for the problem instance.
 
@@ -88,3 +88,28 @@ the solver does not find the optimal solution, it is also possible to get the re
 double objVal = solver.getObjVal();
 double elapsedTime = solver.getElapsedTime();
 double relativeGap = solver.getRelativeGap();
+```
+
+## 3. Run PADP
+
+`PADP` is designed effectively with nested classes and parallel implementations. You should first create the `Graph.java` object which transforms the problem instance into a graph structure with appropriate nodes and arcs. Then, the user is expected to call `runADP()` method. Following is an example of how you
+can solve the given problem instance with `PADP`.
+
+```java
+Graph graph = new Graph(problem);
+graph.runADP();
+```
+
+It is possible to extract the objective function value and elapsed time in seconds once the algorithm finds a solution as follows:
+
+```java
+double objVal = graph.getObjVal();
+double elapsedTime = graph.getElapsedTime();
+```
+
+Author: Onur Demiray
+
+e-mail: odemiray18@ku.edu.tr
+
+For your suggestions and/or questions, please do not hesitate to contact me via my e-mail address. I would also be glad to keep in touch with you if this repository
+somehow helps you in your research or business.

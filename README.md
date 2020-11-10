@@ -4,7 +4,7 @@ The deterministic mixed integer programming equivalent `(MIP-MMDP)`, the so-call
 
 `(MIP-MMDP)` is a novel formulation, which converts the traditional MDP model with known parameters and no capacity constraints to a new model with uncertain parameters and a resource capacity constraint. The motivation behind `(CC-MMDP)` and the technical details related to `(MIP-MMDP)` and `(PADP)` are explained in detail in the following paper:
 
-paper link: TBD
+paper link: https://arxiv.org/abs/2011.04357
 
 ## 1. Data
 
